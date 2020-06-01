@@ -1,0 +1,14 @@
+/* -------------------------------------------------------------------------- */
+
+/*	FULL SCREEN - Outer page layout styles to ensure footer stays at the
+                  bottom of the viewport.
+/* -------------------------------------------------------------------------- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    > footer {
+        margin-top: auto;
+    }
+}

@@ -1,0 +1,135 @@
+/* -------------------------------------------------------------------------- */
+
+/*	HEADER
+/* -------------------------------------------------------------------------- */
+@mixin navHoverFocus {
+    background: $darkBlue;
+    color: $yellow;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    background: $lightBlue;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: $spacingLarge;
+
+        @media screen and (min-width: 600px) {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.logo__link {
+    align-items: center;
+    color: $white;
+    display: flex;
+    text-decoration: none;
+
+    svg {
+        fill: $white;
+        width: 6rem;
+    }
+
+    h1 {display: none;}
+
+    @media screen and (min-width: 600px) {
+        h1 {
+            display: block;
+            font-size: $fontSizeLarge;
+            font-weight: 500;
+            margin-left: $spacingLarge;
+        }
+    }
+}
+
+.nav {
+    background: $blue;
+    display: none;
+
+    @media screen and (min-width: 600px) {
+        display: block !important;
+    }
+}
+
+.nav__mobile-toggle {
+    background: $blue;
+    cursor: pointer;
+    height: 7.6rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 7.6rem;
+    z-index: 2;
+
+    @media screen and (min-width: 600px) {
+        display: none;
+    }
+
+    > * {
+        fill: $white;
+        height: 3rem;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .25s;
+        width: 3rem;
+    }
+
+    .nav__icon-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav__icon-close {
+        opacity: 0;
+        visibility: hidden;
+    }
+} 
+
+.nav__mobile-toggle--active {
+    .nav__icon-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav__icon-close {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 600px) {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    a {
+        border-bottom: 1px solid $lightBlue;
+        color: $white;
+        display: block;
+        font-size: $fontSizeLarge;
+        padding: $spacingLarge;
+        // text-align: center;
+        transition: all .25s;
+
+        &:hover {
+            @include navHoverFocus;
+        }
+    }
+
+    .current_page_item a {
+        @include navHoverFocus;
+    }
+}

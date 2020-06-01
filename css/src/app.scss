@@ -1,0 +1,53 @@
+  
+/*
+	10up Application Front End Engineer
+	URL        : www.rarelyproper.com
+	Author     : Roger Flanagan
+	Author URI : www.rarelyproper.com
+	Language   : CSS (SASS/SCSS Compiled)
+	Version    : 1.0.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+	0. 	Guttenberg and Block Editor Styles (columns, etc)
+	1. 	Config  (Design Tokens, Reset)
+	2.  Layout
+	3.  Components
+
+----------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	0. Guttenberg and Block Editor Styles (columns, etc)
+/* -------------------------------------------------------------------------- */
+@import '../../../../../wp-includes/css/dist/block-library/style.css';
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	1. Config (Design Tokens, Reset)
+/* -------------------------------------------------------------------------- */
+@import 'config/_tokens';
+@import 'config/reset.css';
+@import 'config/typography';
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	2. Layout
+/* -------------------------------------------------------------------------- */
+@import 'layout/full-screen';
+@import 'layout/container';
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	3. Components
+/* -------------------------------------------------------------------------- */
+@import 'components/header';
+@import 'components/footer';
+@import 'components/post';

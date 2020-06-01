@@ -1,0 +1,29 @@
+/* -------------------------------------------------------------------------- */
+
+/*	TYPOGRAPHY
+/* -------------------------------------------------------------------------- */
+html { font-size: 62.5%; } 
+
+body { 
+    color: $darkGray;
+    font-family: $fontFamilyRaleway;
+    font-size: $fontSizeSmall; /* =14px */
+    font-weight: 400;
+}
+
+h2 {
+    font-size: $fontSizeXLarge;
+    font-weight: 500;
+}
+
+a {
+    color: $orange;
+}
+
+p {
+    line-height: 1.5;
+
+    + p {
+        margin-top: $spacingLarge;
+    }
+}
